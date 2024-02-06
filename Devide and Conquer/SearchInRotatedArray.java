@@ -6,7 +6,8 @@ public class SearchInRotatedArray {
         int mid = startingIndex + (endingIndex - startingIndex) / 2;
         if (arr[mid] == target) {
             return mid;
-        } else if (arr[startingIndex] <= arr[mid]) {
+        }
+        if (arr[startingIndex] <= arr[mid]) {
             // case 1 if mid lies on above line
             if (target >= arr[startingIndex] && target <= arr[mid]) {
                 return search(arr, target, startingIndex, mid - 1);
@@ -25,7 +26,7 @@ public class SearchInRotatedArray {
 
     public static void main(String[] args) {
         int[] arr = { 4, 5, 6, 7, 0, 1, 2, 3 };
-        int target = 10; // output -> 4
+        int target = 5;
         int targetIndex = search(arr, target, 0, arr.length - 1);
         if (targetIndex != -1) {
             System.out.println("targetIndex = " + targetIndex);
