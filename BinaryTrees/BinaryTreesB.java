@@ -33,7 +33,6 @@ public class BinaryTreesB {
 
         public static void preOrder(Node root) {
             // Time Complexity O(n)
-            Node temp = root;
             if (root == null) {
                 // System.out.print("-1" + " ");
                 return;
@@ -196,7 +195,7 @@ public class BinaryTreesB {
             }
         }
 
-        public static void topView(Node root) {
+        public void topView(Node root) {
             Queue<NewInfo> q = new LinkedList<NewInfo>();
             HashMap<Integer, Node> map = new HashMap<>();
 
@@ -238,7 +237,6 @@ public class BinaryTreesB {
     }
 
     public static void main(String[] args) {
-        HashMap<Character,Boolean> map = new HashMap<>()
         // int[] nodes = { 1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1 };
         // BinaryTree b = new BinaryTree();
         // Node root = b.buildTree(nodes);
